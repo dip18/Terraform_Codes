@@ -1,4 +1,9 @@
 pipeline {
+    environment {
+      gitCredentialId = 'Jenkins-Git'
+      gitUrl = 'https://github.com/dip18/Terraform_Codes.git'
+      deployBranch = 'phase1'
+    }
     agent {
       node {
         label "master"
@@ -8,11 +13,11 @@ pipeline {
     stages {
       stage('Latest_Code') {
         steps {
-            script{
-                sh "git clone https://dip18:dip_github@2017@github.com/Terraform_Codes.git ."
-                sh "git branch -a"
-                sh "git checkout phase1"
-            }
+            git(
+              url: gitUrl,
+              credentialsId: gitCredentialId,
+              branch: deployBranch
+            )
         }
       }
 
