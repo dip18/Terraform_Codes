@@ -24,7 +24,7 @@ pipeline {
       stage('TF Init&Plan') {
         steps {
             script {
-                bat "powershell.exe tf_init_plan.ps1 -workspace ${WORKSPACE}"
+                bat "tf_init_plan.ps1 -workspace ${WORKSPACE}"
           }
         }
       }
@@ -40,7 +40,7 @@ pipeline {
       stage('TF Apply') {
         steps {
             script {
-               bat "powershell.exe tf_apply.ps1 -workspace ${WORKSPACE}"
+               bat "tf_apply.ps1 -workspace ${WORKSPACE}"
           }
         }
       }
