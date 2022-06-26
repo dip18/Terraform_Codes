@@ -1,6 +1,6 @@
 pipeline {
     environment {
-      gitCredentialId = 'Jenkins-Git'
+      gitCredentialId = 'afc6f0c3-d062-43d7-a7ea-acda4daafef1'
       gitUrl = 'https://github.com/dip18/Terraform_Codes.git'
       deployBranch = 'phase1'
     }
