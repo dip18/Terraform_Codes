@@ -24,7 +24,7 @@ pipeline {
       stage('TF Init&Plan') {
         steps {
             script {
-               bat 'tf_init_plan.bat'
+               bat "tf_init_plan.bat"
           }
         }
       }
@@ -40,7 +40,7 @@ pipeline {
       stage('TF Apply') {
         steps {
             script {
-               bat 'tf_apply.bat'
+               bat "tf_apply.bat"
           }
         }
       }
