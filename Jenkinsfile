@@ -23,7 +23,9 @@ pipeline {
 
       stage('TF Init&Plan') {
         steps {
-          "tf_init_plan.bat".execute()
+            script{
+               bat 'tf_init_plan.bat'
+          }
         }
       }
           
