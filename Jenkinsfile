@@ -23,8 +23,8 @@ pipeline {
 
       stage('TF Init&Plan') {
         steps {
-          bat 'terraform init'
-          bat 'terraform plan'
+          'terraform init'
+          'terraform plan'
         }
       }
           
@@ -38,7 +38,7 @@ pipeline {
 
       stage('TF Apply') {
         steps {
-          bat 'terraform apply -input=false'
+          'terraform apply -input=false'
         }
       }
     }  
