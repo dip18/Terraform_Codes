@@ -23,9 +23,9 @@ pipeline {
 
       stage('TF Init&Plan') {
         steps {
-            script {
+            //script {
                 "tf_init_plan.ps1"
-          }
+          //}
         }
       }
           
@@ -39,9 +39,9 @@ pipeline {
 
       stage('TF Apply') {
         steps {
-            script {
+            //script {
                "tf_apply.ps1"
-          }
+          //}
         }
       }
     }  
