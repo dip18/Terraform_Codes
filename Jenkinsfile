@@ -25,8 +25,9 @@ pipeline {
         steps {
           bat 'terraform init'
           bat 'terraform plan'
+        }
       }
-
+          
       stage('Approval') {
         steps {
           script {
@@ -39,5 +40,6 @@ pipeline {
         steps {
           bat 'terraform apply -input=false'
         }
-    }
+      }
+    }  
   }
